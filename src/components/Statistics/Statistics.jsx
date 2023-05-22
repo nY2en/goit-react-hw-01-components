@@ -9,7 +9,7 @@ import { getRandomHexColor } from 'utils/randomColor';
 export const Statistics = ({ title, statistics }) => {
   return (
     <section>
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatsList>
         {statistics.map(({ label, percentage, id }) => (
           <StatsItem key={id} style={{ backgroundColor: getRandomHexColor() }}>
